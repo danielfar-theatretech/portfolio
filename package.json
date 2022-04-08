@@ -6,8 +6,8 @@
     "scripts": {
         "dev": "parcel src/index.html",
         "dev-404": "parcel src/404.html",
-        "build": "parcel build src/index.html",
-        "build-404": "parcel build src/404.html",
+        "build": "parcel build --public-url /portfolio src/index.html",
+        "build-404": "parcel build --public-url /portfolio src/404.html",
         "deploy": "bash deploy.sh",
         "watch-sass": "sass --watch src/public/scss:src/public/css"
     },
