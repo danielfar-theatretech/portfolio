@@ -1,0 +1,10 @@
+// TODO: turn scrollbar creation into a mixin with params
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: lightblue;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+}

@@ -25,3 +25,4 @@ else
 	echo "returning to branch \"$current_branch\"" &&
 	git checkout $current_branch
 fi
+

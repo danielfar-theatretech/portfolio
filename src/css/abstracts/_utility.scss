@@ -1,0 +1,19 @@
+$directions: top, right, bottom, left;
+$directions-short: (
+    "top": "t",
+    "right": "r",
+    "bottom": "b",
+    "left": "l",
+);
+
+@function repeat($character, $n) {
+    @if ($n > 0) {
+        $c: "";
+        @for $i from 1 through $n {
+            $c: $c + $character;
+        }
+        @return $c;
+    } @else {
+        @return "";
+    }
+}

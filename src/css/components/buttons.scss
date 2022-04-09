@@ -1,0 +1,43 @@
+@use "./abstracts/variables" as vars;
+@use "./abstracts/colors" as clrs;
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 0.8em 0.5em;
+
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-primary {
+    color: clrs.clr(primary, dark-2);
+    background-color: clrs.clr(primary, light-2);
+    border-color: clrs.clr(primary, light-2);
+
+    &:hover {
+        color: clrs.clr(primary, light-2);
+        background-color: clrs.clr(primary, dark);
+        border-color: clrs.clr(primary, dark);
+    }
+}
+
+.btn-return {
+    color: clrs.clr(primary, dark-2);
+    background-color: clrs.clr(primary, light-2);
+    border-color: clrs.clr(primary, light-2);
+
+    &:hover {
+        color: clrs.clr(primary, light-2);
+        background-color: clrs.clr(primary, dark);
+        border-color: clrs.clr(primary, dark);
+    }
+}

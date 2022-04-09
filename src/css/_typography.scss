@@ -1,0 +1,51 @@
+@use "./abstracts/variables" as vars;
+@use "./abstracts/fonts" as a;
+@use "./abstracts/utility" as util;
+@use "./abstracts/breakpoints" as bp;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: a.$serif;
+}
+
+.heading, .title {
+    font-weight: 800;
+}
+
+.sub-heading, .sub-title {
+    font-weight: 600;
+}
+
+@each $bp-name, $bp-size in bp.$grid-breakpoints {
+    .heading {
+        @include bp.media-breakpoint-up($bp-name) {
+            font-size: map-get(vars.$heading-sizes, $bp-name);
+        }
+    }
+
+    .sub-heading {
+        @include bp.media-breakpoint-up($bp-name) {
+            font-size: map-get(vars.$sub-heading-sizes, $bp-name);
+        }
+    }
+
+    .title {
+        @include bp.media-breakpoint-up($bp-name) {
+            font-size: map-get(vars.$title-sizes, $bp-name);
+        }
+    }
+
+    .sub-title {
+        @include bp.media-breakpoint-up($bp-name) {
+            font-size: map-get(vars.$sub-title-sizes, $bp-name);
+        }
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}

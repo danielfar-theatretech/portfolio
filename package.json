@@ -1,28 +1,28 @@
 {
-    "name": "portfolio",
-    "version": "1.0.0",
-    "description": "",
-    "main": "src/index.html",
-    "scripts": {
-        "dev": "parcel src/index.html",
-        "dev-404": "parcel src/404.html",
-        "build": "parcel build --public-url /portfolio src/index.html",
-        "build-404": "parcel build --public-url /portfolio src/404.html",
-        "deploy": "bash deploy.sh",
-        "watch-sass": "sass --watch src/public/scss:src/public/css"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/lordfarquhar/portfolio.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/lordfarquhar/portfolio/issues"
-    },
-    "homepage": "https://github.com/lordfarquhar/portfolio#readme",
-    "devDependencies": {
-        "parcel-bundler": "^1.12.5",
-        "sass": "^1.48.0"
-    }
+  "name": "daniellightandsound",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "dev-404": "parcel src/404.html",
+    "build": "parcel build src/index.html",
+    "build-404": "parcel build src/404.html",
+    "deploy": "bash deploy.sh",
+    "watch-sass": "sass --watch src/public/scss:src/public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielfar-theatretech/github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielfar-theatretech/github.io/issues"
+  },
+  "homepage": "https://github.com/danielfar-theatretech/github.io#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.48.0"
+  }
 }

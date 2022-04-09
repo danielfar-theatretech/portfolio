@@ -1,0 +1,95 @@
+@use "./abstracts/variables" as vars;
+@use "./abstracts/colors" as clrs;
+@use "./abstracts/breakpoints" as bp;
+@use "./abstracts/utility" as util;
+
+body {
+    background-color: clrs.clr(neutral, dark);
+    color: clrs.clr(neutral, light);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), clrs.clr(neutral, dark), rgba(0, 0, 0, 0));
+    margin-bottom: vars.$bottom-spacing;
+}
+
+.container {
+    margin: 0rem 3rem 0rem 3rem;
+}
+
+.section {
+    margin-bottom: vars.$bottom-spacing;
+}
+
+.flex {
+    display: flex;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.f-row {
+    flex-direction: row;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.f-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@each $bp-name, $bp-size in bp.$grid-breakpoints {
+    // Margin Padding
+    @each $direction in util.$directions {
+        @for $i from 0 to vars.$max-size {
+            .m#{bp.breakpoint-infix($bp-name)}-#{map-get(util.$directions-short, $direction)}-#{$i} {
+                @include bp.media-breakpoint-up($bp-name) {
+                    margin-#{$direction}: 0.5rem * $i;
+                }
+            }
+            .p#{bp.breakpoint-infix($bp-name)}-#{map-get(util.$directions-short, $direction)}-#{$i} {
+                @include bp.media-breakpoint-up($bp-name) {
+                    padding-#{$direction}: 0.5rem * $i;
+                }
+            }
+        }
+    }
+
+    // Width Height
+    @for $i from 1 to 101 {
+        .w#{bp.breakpoint-infix($bp-name)}-#{$i} {
+            @include bp.media-breakpoint-up($bp-name) {
+                max-width: 1% * $i;
+            }
+        }
+
+        .h#{bp.breakpoint-infix($bp-name)}-#{$i} {
+            @include bp.media-breakpoint-up($bp-name) {
+                max-height: 1% * $i;
+            }
+        }
+    }
+
+    // flex parameters
+    .f#{bp.breakpoint-infix($bp-name)}-row {
+        @include bp.media-breakpoint-up($bp-name) {
+            flex-direction: row;
+        }
+    }
+
+    .f#{bp.breakpoint-infix($bp-name)}-col {
+        @include bp.media-breakpoint-up($bp-name) {
+            flex-direction: column;
+        }
+    }
+}
+
+.bg-cover {
+    background-size: cover !important;
+}

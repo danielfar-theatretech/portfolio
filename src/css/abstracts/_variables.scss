@@ -1,0 +1,69 @@
+@use "./colors" as clrs;
+
+///////////
+// Sizes //
+///////////
+
+$max-size: 21;
+
+////////////
+// Colors //
+////////////
+
+$bg-main: clrs.clr(neutral, light);
+
+
+$primary: rgb(255, 255, 255);
+$secondary: rgb(255, 255, 255);
+
+$primary-color: rgb(168, 217, 233);
+$primary-color-darker: rgb(101, 200, 233);
+
+/////////////
+// Layouts //
+/////////////
+
+$bottom-spacing: 2rem;
+
+////////////////
+// Typography //
+////////////////
+
+// headings
+$heading-sizes: (
+    "xs": 30px,
+    "sm": 50px,
+    "md": 70px,
+    "lg": 80px,
+    "xl": 90px,
+    "xxl": 100px,
+);
+
+$sub-heading-sizes: (
+    "xs": 20px,
+    "sm": 35px,
+    "md": 55px,
+    "lg": 60px,
+    "xl": 70px,
+    "xxl": 80px,
+);
+
+// titles
+$title-sizes: (
+    "xs": 20px,
+    "sm": 40px,
+    "md": 60px,
+    "lg": 70px,
+    "xl": 80px,
+    "xxl": 90px,
+);
+
+$sub-title-sizes: (
+    "xs": 15px,
+    "sm": 20px,
+    "md": 30px,
+    "lg": 45px,
+    "xl": 55px,
+    "xxl": 75px,
+);
+
